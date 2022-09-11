@@ -1,0 +1,9 @@
+<center><h1 style="color:grey;"> <%= @title %> </h1><center>
+<p style = "font-family:georgia,garamond,serif;font-size:15px;font-style:italic;"><%= @rule %></p>
+<p style = "font-family:georgia,garamond,serif;font-size:15px;font-style:italic;"><%= @rule2 %></p>
+<p style = "font-family:georgia,garamond,serif;font-size:15px;font-style:italic;"> ~ admin ~ </p>
+<hr>
+<p style = "font-family:georgia,garamond,serif;font-size:18px;font-style:none;">~ Welcome, player_id <%= @player_id%> ~</p>
+<div id="game">
+    <%= render partial: 'game/game', locals: {points: 0, player_id: @player_id, scrambled_word: @scrambled_word, word_id: @word_id, score: @score} %>
+</div>
